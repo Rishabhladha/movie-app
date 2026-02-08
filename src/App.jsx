@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     return (
         <div className="min-h-screen bg-[#f5f5f5] dark:bg-[#1a1d29] text-gray-900 dark:text-gray-100 font-sans">
             {!isAuthPage && <Navbar />}
-            <main className={!isAuthPage ? "pt-32 lg:pt-36 min-h-[100vh]" : ""}>
+            <main className={!isAuthPage ? "pt-16 min-h-[100vh]" : ""}>
                 {children}
             </main>
         </div>

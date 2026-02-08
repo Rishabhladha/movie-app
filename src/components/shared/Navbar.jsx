@@ -63,7 +63,7 @@ const Navbar = () => {
                             </Link>
 
                             <div className={cn(
-                                "hidden lg:flex items-center flex-1 max-w-xl transition-all duration-300 bg-white rounded-[4px] px-3 py-2",
+                                "hidden lg:flex items-center flex-1 transition-all duration-300 bg-white rounded-[4px] px-3 py-2",
                                 isSearchFocused ? "ring-2 ring-red-500 shadow-lg" : "opacity-90"
                             )}>
                                 <Search className="text-gray-400 w-4 h-4 mr-3" />
@@ -190,23 +190,7 @@ const Navbar = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Secondary Navigation (Desktop) */}
-                <div className="hidden lg:block border-t border-white/10 mt-2 bg-[#222539]">
-                    <div className="container mx-auto px-4">
-                        <div className="flex items-center justify-between h-10 text-xs font-medium text-gray-300">
-                            <div className="flex gap-6">
-                                {['Movies', 'Stream', 'Events', 'Plays', 'Sports', 'Activities', 'Buzz'].map((item) => (
-                                    <Link key={item} to="#" className="hover:text-white transition-colors hover:underline decoration-red-500 underline-offset-4">{item}</Link>
-                                ))}
-                            </div>
-                            <div className="flex gap-6">
-                                {['ListYourShow', 'Corporates', 'Offers', 'Gift Cards'].map((item) => (
-                                    <Link key={item} to="#" className="hover:text-white transition-colors">{item}</Link>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </motion.header>
 
             {/* Mobile Menu Overlay */}
@@ -248,14 +232,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
 
-                                <div className="space-y-4">
-                                    <div className="text-gray-400 text-sm uppercase tracking-wider font-bold">Navigation</div>
-                                    {['Movies', 'Stream', 'Events', 'Plays', 'Sports', 'Activities', 'Buzz', 'ListYourShow', 'Corporates', 'Offers', 'Gift Cards'].map((item) => (
-                                        <Link key={item} to="#" className="block text-white text-lg font-medium hover:text-red-500 transition-colors">
-                                            {item}
-                                        </Link>
-                                    ))}
-                                </div>
+
                             </div>
                         </div>
                     </motion.div>
